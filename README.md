@@ -2,7 +2,7 @@
 
 **An AI executive team in Grok Bot for a CEO or exec running one company or team: a Chief Of Staff hub, department heads, a marketing team, and the rules they all work by.**
 
-![Org chart](assets/org-chart.png)
+[![How the executive team works](assets/demo.gif)](assets/flow@2x.png)
 
 Inspired by [Tim Scheuer's grokbot-gtm-team](https://github.com/timscheuerai/grokbot-gtm-team). Built by Lev Group.
 
@@ -67,3 +67,7 @@ Running several projects or business units? Add one **Project CEO** bot per proj
 ## License
 
 [MIT](LICENSE).
+
+## Org chart
+
+![Org chart](assets/org-chart.png)
