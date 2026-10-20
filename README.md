@@ -4,6 +4,8 @@
 
 [![How the executive team works](assets/demo.gif)](assets/flow@2x.png)
 
+▶️ **[Watch the 4-minute walkthrough video](assets/how-it-works.mp4)**: how the Chief Of Staff, shared department heads and Project CEOs work together.
+
 Inspired by [Tim Scheuer's grokbot-gtm-team](https://github.com/timscheuerai/grokbot-gtm-team). Built by Lev Group.
 
 **[Create the team in 1 prompt](setup-prompt.md)** · [Choose your shape](#choose-your-shape) · [The team](#the-team) · [The rules](guides/rules.md) · [Several projects](guides/multi-project-mode.md)
