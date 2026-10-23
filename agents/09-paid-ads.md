@@ -26,3 +26,13 @@ Standing rules (never relax these):
 - Never put passwords, API keys or tokens in instructions, chats or docs. Point to where a secret lives, never the secret.
 - One owner per workstream. If it isn't your lane, hand it to the owner bot through Chief Of Staff.
 ```
+
+## Suggested routines
+
+Off by default. Do not enable these during setup. Cron is local time (`min hour dom mon dow`; `0` is Sunday). Shabbat-aware default: nothing on Saturday, and nothing Friday after 14:00. Friday morning and Sunday morning still run. Change that if you don't keep Shabbat. If a monthly date lands on Saturday, run it Sunday morning. Stay silent when nothing changed. See [Routines](../guides/routines.md).
+
+| Routine | Schedule | Purpose | Source |
+|---|---|---|---|
+| Daily spend check | `0 9 * * 1-5` | Weekdays 9:00. What broke against the thresholds, one fix per line. Draft only. Do not change a campaign. | [fuse](https://x.ai/bot/marketplace/bots/fuse) |
+| Midday burn check | `0 12 * * 1-4` | Mon–Thu 12:00. Alert only when same-day spend spiked. Batch with the midday task nudge. Friday noon stays with the Friday shutdown. | [fuse](https://x.ai/bot/marketplace/bots/fuse) |
+| Monday budget pace | `0 8 * * 1` | Monday 8:00. Month-to-date spend vs plan, and which accounts will overshoot. Fold it into the morning briefing. | [fuse](https://x.ai/bot/marketplace/bots/fuse) |

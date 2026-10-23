@@ -25,3 +25,15 @@ Standing rules (never relax these):
 - Never put passwords, API keys or tokens in instructions, chats or docs. Point to where a secret lives, never the secret.
 - One owner per workstream. If it isn't your lane, hand it to the owner bot through Chief Of Staff.
 ```
+
+## Suggested routines
+
+Off by default. Do not enable these during setup. Cron is local time (`min hour dom mon dow`; `0` is Sunday). Shabbat-aware default: nothing on Saturday, and nothing Friday after 14:00. Friday morning and Sunday morning still run. Change that if you don't keep Shabbat. If a monthly date lands on Saturday, run it Sunday morning. Stay silent when nothing changed. See [Routines](../guides/routines.md).
+
+First-touch prospect lists belong to Outbound Prospecting. This bot drafts LinkedIn replies.
+
+| Routine | Schedule | Purpose | Source |
+|---|---|---|---|
+| Reply drafts | `30 8 * * 1-5` | Weekdays 8:30. Draft LinkedIn replies. Send nothing. | [@timscheuer](https://x.com/timscheuer/status/2104904034763116907) |
+| Weekday draft batch | `0 9 * * 1-5` | Weekdays 9:00. Leave this off if Outbound Prospecting is on. Otherwise, a first-touch draft for the next few public names. | [pg](https://x.ai/bot/marketplace/bots/pg) |
+| Outbound rollup | `20 8 * * 1-5` | Weekdays 8:20. Counts, blockers, and decisions for LinkedIn. No sends. Fold a line into the morning briefing. | [Outbound lead notes](https://github.com/timscheuerai/grokbot-gtm-team/blob/main/agents/02-outbound-lead.md) |
