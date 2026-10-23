@@ -31,3 +31,13 @@ Standing rules (never relax these):
 - Never put passwords, API keys or tokens in instructions, chats or docs. Point to where a secret lives, never the secret.
 - One owner per workstream. If it isn't your lane, hand it to the owner bot through Chief Of Staff.
 ```
+
+## Suggested routines
+
+Off by default. Do not enable these during setup. Cron is local time (`min hour dom mon dow`; `0` is Sunday). Shabbat-aware default: nothing on Saturday, and nothing Friday after 14:00. Friday morning and Sunday morning still run. Change that if you don't keep Shabbat. If a monthly date lands on Saturday, run it Sunday morning. Stay silent when nothing changed. See [Routines](../guides/routines.md).
+
+| Routine | Schedule | Purpose | Source |
+|---|---|---|---|
+| Competitor pulse | `0 9 * * 1,3,5` | Monday, Wednesday, and Friday 9:00. Public changes and one counter-move. Silent if unchanged. Feed Marketing Analyst. | [stalk-bot](https://x.ai/bot/marketplace/bots/stalk-bot) |
+| Weekly deep dive | `0 10 * * 5` | Friday 10:00. One competitor in rotation, diffed against the last pass. | [stalk-bot](https://x.ai/bot/marketplace/bots/stalk-bot) |
+| Churn watch | `0 10 * * 1-5` | Weekdays 10:00, and only after the exec names a churn source. Accounts lost to a watched competitor, plus a winback draft. Never send it. | [stalk-bot](https://x.ai/bot/marketplace/bots/stalk-bot) |

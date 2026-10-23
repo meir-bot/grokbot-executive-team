@@ -8,7 +8,7 @@
 
 Inspired by [Tim Scheuer's grokbot-gtm-team](https://github.com/timscheuerai/grokbot-gtm-team). Built by Lev Group.
 
-**[Create the team in 1 prompt](setup-prompt.md)** · [Choose your shape](#choose-your-shape) · [The team](#the-team) · [The rules](guides/rules.md) · [Several projects](guides/multi-project-mode.md)
+**[Create the team in 1 prompt](setup-prompt.md)** · [Choose your shape](#choose-your-shape) · [The team](#the-team) · [The rules](guides/rules.md) · [Routines](guides/routines.md) · [Several projects](guides/multi-project-mode.md)
 
 ## Choose your shape
 
@@ -118,6 +118,8 @@ Drafts back to you    nothing irreversible happens without your explicit OK
 | Monthly expense report, per department or project | 1st of each month | CFO |
 
 QA Bot's daily tests fold into the CTO's input. Jevopus's coding-seat spend folds into the CFO's monthly report. They are not separate routines.
+
+Every other routine is a suggestion on the bot's file. They are off until you turn one on. How to choose, and the public patterns they come from: [Routines](guides/routines.md).
 
 ## License
 

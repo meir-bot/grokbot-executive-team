@@ -33,3 +33,15 @@ Standing rules (never relax these):
 - Never put passwords, API keys or tokens in instructions, chats or docs. Point to where a secret lives, never the secret.
 - One owner per workstream. If it isn't your lane, hand it to the owner bot through Chief Of Staff.
 ```
+
+## Suggested routines
+
+Off by default. Do not enable these during setup. Cron is local time (`min hour dom mon dow`; `0` is Sunday). Shabbat-aware default: nothing on Saturday, and nothing Friday after 14:00. Friday morning and Sunday morning still run. Change that if you don't keep Shabbat. If a monthly date lands on Saturday, run it Sunday morning. Stay silent when nothing changed. See [Routines](../guides/routines.md).
+
+Contract Desk owns the first-pass intake. This bot owns the legal judgment. Turn on one "a contract arrived" trigger, not two.
+
+| Routine | Schedule | Purpose | Source |
+|---|---|---|---|
+| New contract review | Event: mail to a plus-alias the exec names, or a file in the contracts inbox they name | Redline against the playbook and flag risk. Draft only. Leave this off if Contract Desk's intake is on. | [Field notes: contract-reviewer](https://github.com/unicodef1wn/grokbot-field-notes/blob/main/roster/contract-reviewer.md) |
+| Renewal and notice watch | `0 9 * * 1` | Monday 9:00. Auto-renew or notice dates inside 60 and 120 days. Spend Negotiator owns the price talk, not this list. | [haggle-bot](https://x.ai/bot/marketplace/bots/haggle-bot) |
+| Policy page refresh | Event: a message in the policy channel the exec names | Rewrite the policy page when the rule changes. Draft only. Do not publish. | [@distortgeekin](https://x.com/distortgeekin/status/2113261664694894731) |

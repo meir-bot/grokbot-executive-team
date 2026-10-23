@@ -33,3 +33,13 @@ Standing rules (never relax these):
 - Never put passwords, API keys or tokens in instructions, chats or docs. Point to where a secret lives, never the secret.
 - One owner per workstream. If it isn't your lane, hand it to the owner bot through Chief Of Staff.
 ```
+
+## Suggested routines
+
+Off by default. Do not enable these during setup. Cron is local time (`min hour dom mon dow`; `0` is Sunday). Shabbat-aware default: nothing on Saturday, and nothing Friday after 14:00. Friday morning and Sunday morning still run. Change that if you don't keep Shabbat. If a monthly date lands on Saturday, run it Sunday morning. Stay silent when nothing changed. See [Routines](../guides/routines.md).
+
+Search and AI-answer reports belong to SEO/GEO, not here.
+
+| Routine | Schedule | Purpose | Source |
+|---|---|---|---|
+| Daily input | `30 7 * * 0-5` | Sun–Fri 7:30. Decisions, status, and growth ideas for the morning briefing. Do not send a separate note. | This repo |

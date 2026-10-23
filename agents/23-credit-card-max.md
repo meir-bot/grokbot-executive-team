@@ -29,3 +29,15 @@ Standing rules (never relax these):
 - Never put passwords, API keys or tokens in instructions, chats or docs. Point to where a secret lives, never the secret.
 - One owner per workstream. If it isn't your lane, hand it to the owner bot through Chief Of Staff.
 ```
+
+## Suggested routines
+
+Off by default. Do not enable these during setup. Cron is local time (`min hour dom mon dow`; `0` is Sunday). Shabbat-aware default: nothing on Saturday, and nothing Friday after 14:00. Friday morning and Sunday morning still run. Change that if you don't keep Shabbat. If a monthly date lands on Saturday, run it Sunday morning. Stay silent when nothing changed. See [Routines](../guides/routines.md).
+
+No card numbers in the routine output.
+
+| Routine | Schedule | Purpose | Source |
+|---|---|---|---|
+| Monthly card rollup | `0 8 1 * *` | The 1st at 8:00, before the expense report. Perk use, not a budget review. If the 1st is Saturday, run Sunday 8:00. | [credit-card-max](https://x.ai/bot/marketplace/bots/credit-card-max) |
+| Perk expiry watch | `0 8 * * 0-5` | Sun–Fri 8:00. Speak only 5 days out and at period end for an unused perk. Fold that line into the morning briefing. | [credit-card-max](https://x.ai/bot/marketplace/bots/credit-card-max) |
+| Wrong-card watch | `0 8 * * 0` | Sunday 8:00. Recurring charges sitting on a weaker card. | [credit-card-max](https://x.ai/bot/marketplace/bots/credit-card-max) |

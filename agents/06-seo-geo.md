@@ -27,3 +27,12 @@ Standing rules (never relax these):
 - Never put passwords, API keys or tokens in instructions, chats or docs. Point to where a secret lives, never the secret.
 - One owner per workstream. If it isn't your lane, hand it to the owner bot through Chief Of Staff.
 ```
+
+## Suggested routines
+
+Off by default. Do not enable these during setup. Cron is local time (`min hour dom mon dow`; `0` is Sunday). Shabbat-aware default: nothing on Saturday, and nothing Friday after 14:00. Friday morning and Sunday morning still run. Change that if you don't keep Shabbat. If a monthly date lands on Saturday, run it Sunday morning. Stay silent when nothing changed. See [Routines](../guides/routines.md).
+
+| Routine | Schedule | Purpose | Source |
+|---|---|---|---|
+| Weekly search report | `0 8 * * 1` | Monday 8:00. What moved in search, why, and 2–4 things to do. Hand it to the CMO for the morning briefing. | [seo-aeo-desk](https://x.ai/bot/marketplace/bots/seo-aeo-desk) |
+| AI-answer visibility brief | `0 9 * * 1` and `0 9 * * 4` | Monday and Thursday 9:00. Re-run buyer prompts and report who gets named. Both passes are morning. | [ai-search-visibility](https://x.ai/bot/marketplace/bots/ai-search-visibility) |

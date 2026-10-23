@@ -30,3 +30,15 @@ Standing rules (never relax these):
 - Never put passwords, API keys or tokens in instructions, chats or docs. Point to where a secret lives, never the secret.
 - One owner per workstream. If it isn't your lane, hand it to the owner bot through Chief Of Staff.
 ```
+
+## Suggested routines
+
+Off by default. Do not enable these during setup. Cron is local time (`min hour dom mon dow`; `0` is Sunday). Shabbat-aware default: nothing on Saturday, and nothing Friday after 14:00. Friday morning and Sunday morning still run. Change that if you don't keep Shabbat. If a monthly date lands on Saturday, run it Sunday morning. Stay silent when nothing changed. See [Routines](../guides/routines.md).
+
+This bot owns receipt intake. Leave the CFO receipt logger off.
+
+| Routine | Schedule | Purpose | Source |
+|---|---|---|---|
+| Receipt intake | Event: mail to a plus-alias the exec names | Log and categorize the receipt, and match it to a card line. Never pay. | [@bot](https://x.com/bot/status/2111184278377857410), [field notes: bookkeeper](https://github.com/unicodef1wn/grokbot-field-notes/blob/main/roster/bookkeeper.md) |
+| Overdue-invoice draft | `0 9 * * 2,4` | Tuesday and Thursday 9:00. Overdue receivables and a nudge draft. Never send it. | [@Michael_Fenech_](https://x.com/Michael_Fenech_/status/2109959331592482896) |
+| Month-end close prep | `0 9 28 * *` | The 28th at 9:00. Missing receipts and uncategorized lines, so the monthly expense report has them. If the 28th is Saturday, run Friday 9:00. | [Field notes: bookkeeper](https://github.com/unicodef1wn/grokbot-field-notes/blob/main/roster/bookkeeper.md) |

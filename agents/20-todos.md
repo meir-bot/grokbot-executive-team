@@ -29,3 +29,13 @@ Standing rules (never relax these):
 - Never put passwords, API keys or tokens in instructions, chats or docs. Point to where a secret lives, never the secret.
 - One owner per workstream. If it isn't your lane, hand it to the owner bot through Chief Of Staff.
 ```
+
+## Suggested routines
+
+Off by default. Do not enable these during setup. Cron is local time (`min hour dom mon dow`; `0` is Sunday). Shabbat-aware default: nothing on Saturday, and nothing Friday after 14:00. Friday morning and Sunday morning still run. Change that if you don't keep Shabbat. If a monthly date lands on Saturday, run it Sunday morning. Stay silent when nothing changed. See [Routines](../guides/routines.md).
+
+| Routine | Schedule | Purpose | Source |
+|---|---|---|---|
+| Sunday week plan | `0 8 * * 0` | Sunday 8:00. Plan the week in the task list and reschedule so it fits. | [@coreyganim](https://x.com/coreyganim/status/2112663410043470281) |
+| Daily task readback | `0 8 * * 1-5` | Weekdays 8:00. Read today's tasks. Fold this into the morning briefing. Do not send a second message. | [@emanueledpt](https://x.com/emanueledpt/status/2108497977111445907) |
+| Friday shutdown | `0 12 * * 5` | Friday 12:00. What closed this week, and what rolls to Sunday's plan. This owns Friday noon. | Template suggestion |

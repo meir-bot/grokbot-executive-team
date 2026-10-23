@@ -41,7 +41,8 @@ Set up my Grok Bot executive team from the grokbot-executive-team repo.
      Manager (and from each Project CEO when I run several projects).
    - CFO: monthly expense report on the 1st, per department or project,
      including the coding-seat spend Jevopus logs. QA Bot's daily tests fold
-     into the CTO's briefing input. Do not create any other routine.
+     into the CTO's briefing input. Do not create any other routine. Every
+     "Suggested routines" section stays off. I will turn those on myself.
 7. Use the time zone from my account settings; ask only if it isn't set.
 8. Show me what you created and anything I must finish in the app.
 

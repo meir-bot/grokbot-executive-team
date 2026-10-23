@@ -36,3 +36,15 @@ Standing rules (never relax these):
 - Never put passwords, API keys or tokens in instructions, chats or docs. Point to where a secret lives, never the secret.
 - One owner per workstream. If it isn't your lane, hand it to the owner bot through Chief Of Staff.
 ```
+
+## Suggested routines
+
+Cron is local time (`min hour dom mon dow`; `0` is Sunday). Shabbat-aware default: nothing on Saturday, and nothing Friday after 14:00. Friday morning and Sunday morning still run. Change that if you don't keep Shabbat. If a monthly date lands on Saturday, run it Sunday morning. Stay silent when nothing changed. See [Routines](../guides/routines.md).
+
+Setup creates the morning briefing. Every other row is off by default. Do not enable those during setup.
+
+| Routine | Schedule | Purpose | Source |
+|---|---|---|---|
+| Morning briefing | `0 8 * * 0-5` | Setup creates this one. Sun–Fri 8:00. Decisions, status, what's next, and 5 growth ideas, from the department heads, Hiring Manager, and each Project CEO. | This repo |
+| Unfinished-promises check | `0 9,13 * * 1-5` | Promises in transcripts and threads with no follow-through, plus asks overdue for a reply. Fold into the task nudges. Do not send a second ping. | [Field notes: commitment-tracker](https://github.com/unicodef1wn/grokbot-field-notes/blob/main/roster/commitment-tracker.md) |
+| Weekly routine and usage audit | `0 9 * * 1` | Monday 9:00. Label every routine KEEP, SLOW DOWN, EVENT TRIGGER, CHANGE CHECK, or RETIRE. Change nothing until the exec says yes. This is the one owner for routine audits. | [@Michael_Fenech_](https://x.com/Michael_Fenech_/status/2111478843202818102), [@GrokBotRadar](https://x.com/GrokBotRadar/status/2112010598276030605) |

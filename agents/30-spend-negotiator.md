@@ -31,3 +31,14 @@ Standing rules (never relax these):
 - Never put passwords, API keys or tokens in instructions, chats or docs. Point to where a secret lives, never the secret.
 - One owner per workstream. If it isn't your lane, hand it to the owner bot through Chief Of Staff.
 ```
+
+## Suggested routines
+
+Off by default. Do not enable these during setup. Cron is local time (`min hour dom mon dow`; `0` is Sunday). Shabbat-aware default: nothing on Saturday, and nothing Friday after 14:00. Friday morning and Sunday morning still run. Change that if you don't keep Shabbat. If a monthly date lands on Saturday, run it Sunday morning. Stay silent when nothing changed. See [Routines](../guides/routines.md).
+
+The CLO owns notice dates. Save Me Money owns personal subscriptions. This bot owns company price talks.
+
+| Routine | Schedule | Purpose | Source |
+|---|---|---|---|
+| Renewal window watch | `0 9 * * 2` | Tuesday 9:00. Company tools renewing within 120 days with no negotiation note yet. Draft the counteroffer. Never send it. | [haggle-bot](https://x.ai/bot/marketplace/bots/haggle-bot) |
+| Monthly vendor refresh | `0 11 1 * *` | The 1st at 11:00, after the expense report. Company vendor list, what changed. If the 1st is Saturday, run Sunday 11:00. | [haggle-bot](https://x.ai/bot/marketplace/bots/haggle-bot) |

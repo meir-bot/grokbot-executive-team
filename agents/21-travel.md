@@ -30,3 +30,13 @@ Standing rules (never relax these):
 - Never put passwords, API keys or tokens in instructions, chats or docs. Point to where a secret lives, never the secret.
 - One owner per workstream. If it isn't your lane, hand it to the owner bot through Chief Of Staff.
 ```
+
+## Suggested routines
+
+Off by default. Do not enable these during setup. Cron is local time (`min hour dom mon dow`; `0` is Sunday). Shabbat-aware default: nothing on Saturday, and nothing Friday after 14:00. Friday morning and Sunday morning still run. Change that if you don't keep Shabbat. If a monthly date lands on Saturday, run it Sunday morning. Stay silent when nothing changed. See [Routines](../guides/routines.md).
+
+| Routine | Schedule | Purpose | Source |
+|---|---|---|---|
+| Trip-conflict check | Event: a new calendar event, or a flight-confirmation email | Flag an overlap, such as a call during a flight. Never book or change the trip. | [@coreyganim](https://x.com/coreyganim/status/2112663410043470281) |
+| Check-in brief | `0 18 * * 0-4` | Sun–Thu 18:00, and only if a flight is inside 24–30 hours. Check-in, weather, ground transport. Silent otherwise. No Friday evening. | Template suggestion |
+| Fare watch | `0 9 * * 1,4` | Monday and Thursday 9:00. Re-price saved trips and speak only when the fare dropped enough to matter. Never book. | Template suggestion |

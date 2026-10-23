@@ -32,3 +32,12 @@ Standing rules (never relax these):
 - Never put passwords, API keys or tokens in instructions, chats or docs. Point to where a secret lives, never the secret.
 - One owner per workstream. If it isn't your lane, hand it to the owner bot through Chief Of Staff.
 ```
+
+## Suggested routines
+
+Off by default. Do not enable these during setup. Cron is local time (`min hour dom mon dow`; `0` is Sunday). Shabbat-aware default: nothing on Saturday, and nothing Friday after 14:00. Friday morning and Sunday morning still run. Change that if you don't keep Shabbat. If a monthly date lands on Saturday, run it Sunday morning. Stay silent when nothing changed. See [Routines](../guides/routines.md).
+
+| Routine | Schedule | Purpose | Source |
+|---|---|---|---|
+| Morning product walk | `0 8 * * 1-5` | Weekdays 8:00, in the test account only. Shipped, unshipped, and broken, with repro steps. Hand the result to the CTO for the morning briefing. | [startup-qa-bot](https://x.ai/bot/marketplace/bots/startup-qa-bot) |
+| Post-merge check | Event: a pull request merges in the product repo | Re-run the blocking checks against that build. Do not deploy a fix. | [qa-bot](https://x.ai/bot/marketplace/bots/qa-bot) |

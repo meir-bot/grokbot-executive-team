@@ -35,3 +35,13 @@ Standing rules (never relax these):
 - Never put passwords, API keys or tokens in instructions, chats or docs. Point to where a secret lives, never the secret.
 - One owner per workstream. If it isn't your lane, hand it to the owner bot through Chief Of Staff.
 ```
+
+## Suggested routines
+
+Off by default. Do not enable these during setup. Cron is local time (`min hour dom mon dow`; `0` is Sunday). Shabbat-aware default: nothing on Saturday, and nothing Friday after 14:00. Friday morning and Sunday morning still run. Change that if you don't keep Shabbat. If a monthly date lands on Saturday, run it Sunday morning. Stay silent when nothing changed. See [Routines](../guides/routines.md).
+
+| Routine | Schedule | Purpose | Source |
+|---|---|---|---|
+| Daily input | `30 7 * * 0-5` | Sun–Fri 7:30. Decisions, status, what's next, 1–2 growth ideas. This feeds the morning briefing. Do not send a separate note. | This repo |
+| Nightly code audit | `0 4 * * 0-4` | Sun–Thu 4:00. One cleanup pull request per area, ready by morning. Draft only. Do not merge or deploy. | [nightly-audit-engineer](https://x.ai/bot/marketplace/bots/nightly-audit-engineer), [field notes](https://github.com/unicodef1wn/grokbot-field-notes/blob/main/roster/nightly-audit-engineer.md) |
+| CI or deploy failure | Event: GitHub CI failure on the main branch, or a deploy failure | Triage and open a fix pull request. No polling. Do not merge or deploy. | [Field notes: ci-autofix](https://github.com/unicodef1wn/grokbot-field-notes/blob/main/roster/ci-autofix.md) |

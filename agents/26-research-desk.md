@@ -32,3 +32,13 @@ Standing rules (never relax these):
 - Never put passwords, API keys or tokens in instructions, chats or docs. Point to where a secret lives, never the secret.
 - One owner per workstream. If it isn't your lane, hand it to the owner bot through Chief Of Staff.
 ```
+
+## Suggested routines
+
+Off by default. Do not enable these during setup. Cron is local time (`min hour dom mon dow`; `0` is Sunday). Shabbat-aware default: nothing on Saturday, and nothing Friday after 14:00. Friday morning and Sunday morning still run. Change that if you don't keep Shabbat. If a monthly date lands on Saturday, run it Sunday morning. Stay silent when nothing changed. See [Routines](../guides/routines.md).
+
+| Routine | Schedule | Purpose | Source |
+|---|---|---|---|
+| Daily topic brief | `0 7 * * 1-5` | Weekdays 7:00. Watch topics, grouped, with a link on every line. Hand only the notable lines to the morning briefing. | [x-brief](https://x.ai/bot/marketplace/bots/x-brief) |
+| Friday 30-day pulse | `0 10 * * 5` | Friday 10:00. What people said in public over the last 30 days on 1–3 open decisions. | Template suggestion |
+| Claim check | Event: another bot hands off a draft that states facts | Check the claims with dated citations before the draft reaches the exec. | Template suggestion |

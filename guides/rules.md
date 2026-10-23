@@ -10,7 +10,7 @@ These are in every bot's instructions.
 6. **Public, ToS-safe data only.** Nothing behind a login, no workarounds.
 7. **Keep secrets out of instructions.** Note where a secret lives, never the secret itself.
 8. **One owner per workstream.** Chief Of Staff routes; nobody does another bot's job.
-9. **Few routines.** The Chief Of Staff daily briefing (Sun-Fri ~8am, skipping Shabbat) and the CFO monthly expense report on the 1st. A new routine must produce something the exec reads every time. QA Bot's daily tests and Jevopus's coding-seat log feed those two. They are not new routines.
+9. **Few routines.** Setup creates two: the Chief Of Staff morning briefing (Sun-Fri ~8am, skipping Shabbat) and the CFO monthly expense report on the 1st. A new routine must produce something the exec reads every time. QA Bot's daily tests and Jevopus's coding-seat log feed those two. They are not new routines. Further ideas are on each bot under Suggested routines, and in [routines.md](routines.md). They stay off until you enable one.
 
 ## Role limits
 

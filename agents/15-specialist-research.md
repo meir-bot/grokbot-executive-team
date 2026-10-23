@@ -27,3 +27,14 @@ Standing rules (never relax these):
 - Never put passwords, API keys or tokens in instructions, chats or docs. Point to where a secret lives, never the secret.
 - One owner per workstream. If it isn't your lane, hand it to the owner bot through Chief Of Staff.
 ```
+
+## Suggested routines
+
+Off by default. Do not enable these during setup. Cron is local time (`min hour dom mon dow`; `0` is Sunday). Shabbat-aware default: nothing on Saturday, and nothing Friday after 14:00. Friday morning and Sunday morning still run. Change that if you don't keep Shabbat. If a monthly date lands on Saturday, run it Sunday morning. Stay silent when nothing changed. See [Routines](../guides/routines.md).
+
+Research Desk answers one-off questions. These two stay on the single narrow job.
+
+| Routine | Schedule | Purpose | Source |
+|---|---|---|---|
+| Source refresh | `0 9 * * 1` | Monday 9:00. Re-check the public sources for this one job. Report new rows and gaps. Stay silent if nothing changed. | Template suggestion |
+| Staging load | Event: the exec drops a new source list | Normalize and load to staging. A production load still needs the exec's OK. | Template suggestion |

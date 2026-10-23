@@ -31,3 +31,15 @@ Standing rules (never relax these):
 - Never put passwords, API keys or tokens in instructions, chats or docs. Point to where a secret lives, never the secret.
 - One owner per workstream. If it isn't your lane, hand it to the owner bot through Chief Of Staff.
 ```
+
+## Suggested routines
+
+Off by default. Do not enable these during setup. Cron is local time (`min hour dom mon dow`; `0` is Sunday). Shabbat-aware default: nothing on Saturday, and nothing Friday after 14:00. Friday morning and Sunday morning still run. Change that if you don't keep Shabbat. If a monthly date lands on Saturday, run it Sunday morning. Stay silent when nothing changed. See [Routines](../guides/routines.md).
+
+The Chief Of Staff weekly usage audit is the owner for routine audits. Leave the weekly review below off while that audit is on.
+
+| Routine | Schedule | Purpose | Source |
+|---|---|---|---|
+| Weekly org review | `0 10 * * 0` | Sunday 10:00. Keep, improve, merge, or retire for each bot, skill, and routine. Report only. Do not edit bots. | [alfred](https://x.ai/bot/marketplace/bots/alfred) |
+| Monthly portfolio review | `0 7 1 * *` | The 1st at 7:00, before the other month-open jobs. Whether the bot set still matches the outcomes. Skip this in a quarter-month if the quarterly review is on. If the 1st is Saturday, run Sunday 7:00. | [alfred](https://x.ai/bot/marketplace/bots/alfred) |
+| Quarterly operating review | `0 7 1 1,4,7,10 *` | 1 January, April, July, and October at 7:00. Replaces the monthly portfolio review that morning. | [alfred](https://x.ai/bot/marketplace/bots/alfred) |

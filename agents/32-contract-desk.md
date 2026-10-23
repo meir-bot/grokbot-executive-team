@@ -29,3 +29,14 @@ Standing rules (never relax these):
 - Never put passwords, API keys or tokens in instructions, chats or docs. Point to where a secret lives, never the secret.
 - One owner per workstream. If it isn't your lane, hand it to the owner bot through Chief Of Staff.
 ```
+
+## Suggested routines
+
+Off by default. Do not enable these during setup. Cron is local time (`min hour dom mon dow`; `0` is Sunday). Shabbat-aware default: nothing on Saturday, and nothing Friday after 14:00. Friday morning and Sunday morning still run. Change that if you don't keep Shabbat. If a monthly date lands on Saturday, run it Sunday morning. Stay silent when nothing changed. See [Routines](../guides/routines.md).
+
+One intake with the CLO. This bot does the first pass. The CLO owns the judgment.
+
+| Routine | Schedule | Purpose | Source |
+|---|---|---|---|
+| Contract arrives | Event: mail to a plus-alias the exec names, or a file in the contracts inbox they name | First-pass redline and a risk summary. Draft only. Do not run the CLO's intake as well. | [Field notes: contract-reviewer](https://github.com/unicodef1wn/grokbot-field-notes/blob/main/roster/contract-reviewer.md) |
+| Signature chase | `0 10 * * 1,3` | Monday and Wednesday 10:00. Drafts waiting on a signature for more than 3 days, plus a nudge the exec can send. | Template suggestion |

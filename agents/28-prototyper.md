@@ -31,3 +31,12 @@ Standing rules (never relax these):
 - Never put passwords, API keys or tokens in instructions, chats or docs. Point to where a secret lives, never the secret.
 - One owner per workstream. If it isn't your lane, hand it to the owner bot through Chief Of Staff.
 ```
+
+## Suggested routines
+
+Off by default. Do not enable these during setup. Cron is local time (`min hour dom mon dow`; `0` is Sunday). Shabbat-aware default: nothing on Saturday, and nothing Friday after 14:00. Friday morning and Sunday morning still run. Change that if you don't keep Shabbat. If a monthly date lands on Saturday, run it Sunday morning. Stay silent when nothing changed. See [Routines](../guides/routines.md).
+
+| Routine | Schedule | Purpose | Source |
+|---|---|---|---|
+| Prototype rundown | `0 9 * * 1-5` | Weekdays 9:00. Finished draft builds and queued idea briefs waiting for a yes. Fold it into the morning task nudge. Do not merge. | [proto-bot](https://x.ai/bot/marketplace/bots/proto-bot) |
+| Craft scan | `0 10 * * 1` | Monday 10:00. New public models, techniques, and guides for the crafts already in use. | [proto-bot](https://x.ai/bot/marketplace/bots/proto-bot) |

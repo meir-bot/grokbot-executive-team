@@ -25,3 +25,13 @@ Standing rules (never relax these):
 - Never put passwords, API keys or tokens in instructions, chats or docs. Point to where a secret lives, never the secret.
 - One owner per workstream. If it isn't your lane, hand it to the owner bot through Chief Of Staff.
 ```
+
+## Suggested routines
+
+Off by default. Do not enable these during setup. Cron is local time (`min hour dom mon dow`; `0` is Sunday). Shabbat-aware default: nothing on Saturday, and nothing Friday after 14:00. Friday morning and Sunday morning still run. Change that if you don't keep Shabbat. If a monthly date lands on Saturday, run it Sunday morning. Stay silent when nothing changed. See [Routines](../guides/routines.md).
+
+| Routine | Schedule | Purpose | Source |
+|---|---|---|---|
+| Weekly brand-drift check | `0 9 * * 1` | Monday 9:00. Duplicate components, detached instances, hard-coded values. | [figma-bro](https://x.ai/bot/marketplace/bots/figma-bro) |
+| Ready-for-dev sweep | `0 10 * * 4` | Thursday 10:00. Frames marked ready that still have no spec. Moved off Friday afternoon. | [figma-bro](https://x.ai/bot/marketplace/bots/figma-bro) |
+| Open critique fixes | `0 10 * * 3` | Wednesday 10:00. Critique items still open, with an offer to re-check. | [critiquito](https://x.ai/bot/marketplace/bots/critiquito) |

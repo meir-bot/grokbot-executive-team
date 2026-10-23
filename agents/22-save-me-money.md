@@ -30,3 +30,15 @@ Standing rules (never relax these):
 - Never put passwords, API keys or tokens in instructions, chats or docs. Point to where a secret lives, never the secret.
 - One owner per workstream. If it isn't your lane, hand it to the owner bot through Chief Of Staff.
 ```
+
+## Suggested routines
+
+Off by default. Do not enable these during setup. Cron is local time (`min hour dom mon dow`; `0` is Sunday). Shabbat-aware default: nothing on Saturday, and nothing Friday after 14:00. Friday morning and Sunday morning still run. Change that if you don't keep Shabbat. If a monthly date lands on Saturday, run it Sunday morning. Stay silent when nothing changed. See [Routines](../guides/routines.md).
+
+Company vendor lists belong to Spend Negotiator. This bot is personal spend.
+
+| Routine | Schedule | Purpose | Source |
+|---|---|---|---|
+| Subscription list | `0 9 * * 1` | Monday 9:00. Receipts and renewals into a subscription list. The exec decides what to cancel. | [@grokbotguide](https://x.com/grokbotguide/status/2106708607417106888) |
+| Bills due | `0 9 * * 1` | Same Monday pass. Bills and renewals due in 14 days, plus a better-quote draft. Never send it. | [@grokbotguide](https://x.com/grokbotguide/status/2106089677589770448) |
+| Monthly personal inventory | `0 12 1 * *` | The 1st at 12:00, after the company vendor refresh. New or changed personal spend. If the 1st is Saturday, run Sunday 12:00. | [haggle-bot](https://x.ai/bot/marketplace/bots/haggle-bot) |

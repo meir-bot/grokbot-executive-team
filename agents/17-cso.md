@@ -32,3 +32,13 @@ Standing rules (never relax these):
 - Never put passwords, API keys or tokens in instructions, chats or docs. Point to where a secret lives, never the secret.
 - One owner per workstream. If it isn't your lane, hand it to the owner bot through Chief Of Staff.
 ```
+
+## Suggested routines
+
+Off by default. Do not enable these during setup. Cron is local time (`min hour dom mon dow`; `0` is Sunday). Shabbat-aware default: nothing on Saturday, and nothing Friday after 14:00. Friday morning and Sunday morning still run. Change that if you don't keep Shabbat. If a monthly date lands on Saturday, run it Sunday morning. Stay silent when nothing changed. See [Routines](../guides/routines.md).
+
+| Routine | Schedule | Purpose | Source |
+|---|---|---|---|
+| Monthly permission audit | `0 10 3 * *` | The 3rd at 10:00, off the 1st. Each bot lists what it believes it may do without asking. Read only. If the 3rd is Saturday, run Sunday. | [@Michael_Fenech_](https://x.com/Michael_Fenech_/status/2105295601143267677) |
+| Overnight-login risk | `0 10 * * 0` | Sunday 10:00. Routines that need a website sign-in, and approvals that can expire overnight. Read only. | [@Michael_Fenech_](https://x.com/Michael_Fenech_/status/2113698469080682552) |
+| Dependency and secret scan | Event: a GitHub pull request is opened | Report a leaked key as file:line and key type, and name a vulnerable dependency. No fix, no value printed. | Template suggestion |

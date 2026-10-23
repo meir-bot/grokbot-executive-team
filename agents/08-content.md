@@ -26,3 +26,13 @@ Standing rules (never relax these):
 - Never put passwords, API keys or tokens in instructions, chats or docs. Point to where a secret lives, never the secret.
 - One owner per workstream. If it isn't your lane, hand it to the owner bot through Chief Of Staff.
 ```
+
+## Suggested routines
+
+Off by default. Do not enable these during setup. Cron is local time (`min hour dom mon dow`; `0` is Sunday). Shabbat-aware default: nothing on Saturday, and nothing Friday after 14:00. Friday morning and Sunday morning still run. Change that if you don't keep Shabbat. If a monthly date lands on Saturday, run it Sunday morning. Stay silent when nothing changed. See [Routines](../guides/routines.md).
+
+| Routine | Schedule | Purpose | Source |
+|---|---|---|---|
+| Outlier-post scout | `0 8 * * 1-5` | Weekdays 8:00. Top public posts in the niche and why they worked, saved to a swipe file. | [@timscheuer](https://x.com/timscheuer/status/2104904034763116907), [@AIGuide_](https://x.com/AIGuide_/status/2111645720050651605) |
+| Monday content plan | `0 9 * * 1` | Monday 9:00. Last week's numbers, then this week's post briefs. | [@AIGuide_](https://x.com/AIGuide_/status/2111645720050651605) |
+| Voice re-learn | `0 11 * * 5` | Friday 11:00. Compare what the exec actually sent with the drafts, and update the voice notes. Moved off Friday afternoon. | [human-copywriter](https://x.ai/bot/marketplace/bots/human-copywriter), [field notes: voice](https://github.com/unicodef1wn/grokbot-field-notes/blob/main/roster/voice.md) |

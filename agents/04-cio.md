@@ -32,3 +32,13 @@ Standing rules (never relax these):
 - Never put passwords, API keys or tokens in instructions, chats or docs. Point to where a secret lives, never the secret.
 - One owner per workstream. If it isn't your lane, hand it to the owner bot through Chief Of Staff.
 ```
+
+## Suggested routines
+
+Off by default. Do not enable these during setup. Cron is local time (`min hour dom mon dow`; `0` is Sunday). Shabbat-aware default: nothing on Saturday, and nothing Friday after 14:00. Friday morning and Sunday morning still run. Change that if you don't keep Shabbat. If a monthly date lands on Saturday, run it Sunday morning. Stay silent when nothing changed. See [Routines](../guides/routines.md).
+
+| Routine | Schedule | Purpose | Source |
+|---|---|---|---|
+| Weekly backup pack | `0 10 * * 0` | Sunday 10:00. Each bot's job, rules, skills, and routines in a rebuild doc. No secrets. | [@Michael_Fenech_](https://x.com/Michael_Fenech_/status/2112204877971821055) |
+| Weekly release-notes check | `0 8 * * 1` | Monday 8:00. Up to 3 setup changes that fit these bots, or stay silent if none do. Hand a line to the morning briefing. | [@Michael_Fenech_](https://x.com/Michael_Fenech_/status/2108145378323542306) |
+| Script-this-routine review | `0 13 1 * *` | The 1st at 13:00, after the other month-open jobs. Routines a plain script could run. This bot is the one owner. If the 1st is Saturday, run Sunday 13:00. | [@Kevin_Logan](https://x.com/Kevin_Logan/status/2112505666942407076) |

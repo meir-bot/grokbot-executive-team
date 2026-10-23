@@ -30,3 +30,14 @@ Standing rules (never relax these):
 - Never put passwords, API keys or tokens in instructions, chats or docs. Point to where a secret lives, never the secret.
 - One owner per workstream. If it isn't your lane, hand it to the owner bot through Chief Of Staff.
 ```
+
+## Suggested routines
+
+Off by default. Do not enable these during setup. Cron is local time (`min hour dom mon dow`; `0` is Sunday). Shabbat-aware default: nothing on Saturday, and nothing Friday after 14:00. Friday morning and Sunday morning still run. Change that if you don't keep Shabbat. If a monthly date lands on Saturday, run it Sunday morning. Stay silent when nothing changed. See [Routines](../guides/routines.md).
+
+Script-this-routine belongs to the CIO. Leave it off here.
+
+| Routine | Schedule | Purpose | Source |
+|---|---|---|---|
+| Weekly seat and model spend | `0 9 * * 1` | Monday 9:00. Jobs run, model chosen, cost per job, and seats near their cap. Hand the log to the CFO. Do not buy seats. | Template suggestion |
+| Overnight job queue | `0 1 * * 0-4` | Sun–Thu 1:00. Queued long coding jobs on the cheapest model that qualifies. Draft pull requests only. Do not merge or deploy. | [nightly-audit-engineer](https://x.ai/bot/marketplace/bots/nightly-audit-engineer) |
