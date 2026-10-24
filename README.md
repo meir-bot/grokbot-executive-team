@@ -177,6 +177,6 @@ flowchart TD
   growth --> coach["Sales Call Coach"]
 ```
 
-The picture below is the core hub (department heads and the marketing team). The chart above is the full team.
+The picture below is the same full team.
 
-![Core org chart](assets/org-chart.png)
+![Org chart](assets/org-chart.png)
